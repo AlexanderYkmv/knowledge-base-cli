@@ -32,7 +32,7 @@ class KnowledgeService:
         if not query or not query.strip():
             raise ValueError("Search query cannot be empty.")
 
-        return self.storage.search(query.strip())
+        return self.storage.search_items_by_word(query.strip())
 
     def delete_item(self, item_id: int) -> None:
         if item_id <= 0:
