@@ -77,7 +77,7 @@ class SQLiteStorage:
             content=row[2],
         )
 
-    def search(self, query: str) -> list[KnowledgeItem]:
+    def search_items_by_word(self, query: str) -> list[KnowledgeItem]:
         search_term = f"%{query}%"
 
         with self._get_connection() as connection:
