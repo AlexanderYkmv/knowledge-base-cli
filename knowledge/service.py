@@ -1,4 +1,4 @@
-from knowledge.models import KnowledgeItem
+from knowledge.model import KnowledgeItem
 from knowledge.db import SQLiteStorage
 
 

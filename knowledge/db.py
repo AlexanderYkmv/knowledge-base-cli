@@ -1,7 +1,7 @@
 import sqlite3
 from pathlib import Path
 
-from knowledge.models import KnowledgeItem
+from knowledge.model import KnowledgeItem
 
 
 class SQLiteStorage:

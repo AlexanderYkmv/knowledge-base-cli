@@ -8,7 +8,7 @@ from knowledge.service import KnowledgeService
 def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="knowledge",
-        description="A simple command-line knowledge base.",
+        description="Knowledge Base CLI",
     )
 
     subparsers = parser.add_subparsers(
@@ -18,43 +18,43 @@ def create_parser() -> argparse.ArgumentParser:
 
     add_parser = subparsers.add_parser(
         "add",
-        help="Add a new knowledge item.",
+        help="Add a new knowledge item",
     )
     add_parser.add_argument("title", help="Item title.")
     add_parser.add_argument("content", help="Item content.")
 
     subparsers.add_parser(
         "list",
-        help="List all knowledge items.",
+        help="List all knowledge items",
     )
 
     show_parser = subparsers.add_parser(
         "show",
-        help="Show a knowledge item.",
+        help="Show a knowledge item",
     )
     show_parser.add_argument(
         "id",
         type=int,
-        help="ID of the item.",
+        help="ID of the item",
     )
 
     search_parser = subparsers.add_parser(
         "search",
-        help="Search knowledge items.",
+        help="Search knowledge items",
     )
     search_parser.add_argument(
         "query",
-        help="Text to search for.",
+        help="Text to search for",
     )
 
     delete_parser = subparsers.add_parser(
         "delete",
-        help="Delete a knowledge item.",
+        help="Delete a knowledge item",
     )
     delete_parser.add_argument(
         "id",
         type=int,
-        help="ID of the item.",
+        help="ID of the item",
     )
 
     return parser
